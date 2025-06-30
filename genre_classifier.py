@@ -139,9 +139,6 @@ def compute_features(audio_object: BytesIO):
     except Exception as e:
         st.error(f"Error processing audio: {e}")
 
-    df = features.to_frame().T
-    df.to_csv("test_features.csv", index=False)
-
     return features
 
 
